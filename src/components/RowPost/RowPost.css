@@ -1,0 +1,72 @@
+.row {
+    margin-left: 20px;
+    color: white;
+    position: relative;
+  }
+  
+  .scroll-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .scroll-button-left, .scroll-button-right {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    pointer-events: all;
+    font-size: 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    scroll-behavior: smooth;
+  }
+  
+  .posters {
+    display: flex;
+    padding: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+  }
+  
+  .poster-container {
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
+  
+  .smallposter-container {
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
+  
+  .poster, .smallposter {
+    transition: transform 0.3s;
+  }
+  
+  .poster {
+    height: 250px; /* fixed height to maintain size */
+    object-fit: contain;
+  }
+  
+  .smallposter {
+    height: 100px; /* fixed height to maintain size */
+  }
+  
+  .posters::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .poster:hover, .smallposter:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
